@@ -1,0 +1,56 @@
+
+
+<html>
+<body>
+		<script>
+
+		function myFunction(){
+			var element1 = document.getElementById("demo1");
+			var element2 = document.getElementById("demo2");
+			var element3 = document.getElementById("demo3");
+			var element4 = document.getElementById("demo4");
+			var element5 = document.getElementById("demo5");
+
+			var alphaExp = /^[a-zA-Z]+$/;
+			var dob = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+			var email = /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}$/;
+			
+			if (element1.value == "" || element2.value == ""||element3.value == "" || element4.value == ""||element5.value == ""){
+				alert("A Field is empty");
+				return false;
+				}
+
+			if (!(element1.value.match(alphaExp))){
+				alert("Invalid Name!");
+				return false;
+			}
+			
+			if (!(element2.value.match(dob))){
+				alert("Invalid Date of Birth !");
+				return false;
+			}
+			
+			if (!(element3.value.match(email))){
+				alert("Invalid Email!");
+				return false;
+			}
+		}
+
+		</script>
+
+<form onsubmit = "return myFunction()" action = "success.html">
+
+Name: <br><input id = "demo1"><br><br>
+
+Date of Birth(DD/MM/YYYY): <br><input id = "demo2"><br><br>
+
+Address:<br><input id = "demo4"><br><br>
+Post Code:<br><input id = "demo5"><br><br>
+
+E-Mail Address<br><input id = "demo3"><br><br>
+
+<input type = "Submit"></input>
+
+</form>
+</body>
+</html>

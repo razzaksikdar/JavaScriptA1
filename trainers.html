@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trainer Page</title>
+
+	<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
+
+</head>
+<body>
+
+<h1> Trainer Search</h1>
+<input type="text" name="Name" placeholder="Enter Name" id="nam2">
+	
+<button onclick="Search()">Submit</button> 
+
+<table style="width:40%">
+  <tr>
+    <th>Name:</th>
+    <td><p id="name"></p></td>
+  </tr>
+   <tr>
+    <th>Age:</th>
+    <td><p id="age">.</p></td>
+  </tr>
+    <tr>
+    <th>secretIdentity:</th>
+    <td><p id="sid">.</p></td>
+  </tr>
+    <tr>
+    <th>Skills:</th>
+    <td><p id="skills">.</p></td>
+  </tr>
+</table>
+
+
+<h1> Skills Search</h1>
+<input type="text" name="skills search" placeholder="Enter Skills name" id="nam3">
+	
+<button onclick="Search1()">Submit</button> 
+
+<table style="width:40%">
+  <tr>
+    <th>Name:</th>
+    <td><p id="name1"></p></td>
+  </tr>
+   <tr>
+    <th>Age:</th>
+    <td><p id="age1">.</p></td>
+  </tr>
+    <tr>
+    <th>secretIdentity:</th>
+    <td><p id="sid1">.</p></td>
+  </tr>
+    <tr>
+    <th>Skills:</th>
+    <td><p id="skills1">.</p></td>
+  </tr>
+</table>
+
+<script type="text/javascript" src="data.js">
+
+
+</script>
+
+<script>
+console.log(data);
+</script> 
+
+
+
+</body>
+</html>
