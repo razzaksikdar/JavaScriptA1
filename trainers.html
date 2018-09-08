@@ -4,76 +4,102 @@
 	<title>Trainer Page</title>
 
 	<style>
-table, th, td {
+  table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
-}
-th, td {
+  }
+  th, td {
     padding: 5px;
     text-align: left;    
-}
+  }
 </style>
 
+<style type="text/css">
+
+ol {
+ list-style: none;
+ counter-reset: item;
+}
+li {
+ counter-increment: item;
+ margin-bottom: 5px;
+}
+li:before {
+ margin-right: 10px;
+ content: counter(item);
+ background: lightblue;
+ border-radius: 100%;
+ color: white;
+ width: 1.2em;
+ text-align: center;
+ display: inline-block;
+}
+
+</style>
+
+<script type="text/javascript" src="data.js"></script>
 </head>
 <body>
 
-<h1> Trainer Search</h1>
-<input type="text" name="Name" placeholder="Enter Name" id="nam2">
-	
-<button onclick="Search()">Submit</button> 
+  <h1> Trainer Search</h1>
+  <input type="text" name="Name" placeholder="Enter Name" id="nam2">
 
-<table style="width:40%">
-  <tr>
-    <th>Name:</th>
-    <td><p id="name"></p></td>
-  </tr>
-   <tr>
-    <th>Age:</th>
-    <td><p id="age">.</p></td>
-  </tr>
-    <tr>
-    <th>secretIdentity:</th>
-    <td><p id="sid">.</p></td>
-  </tr>
-    <tr>
-    <th>Skills:</th>
-    <td><p id="skills">.</p></td>
-  </tr>
-</table>
+  <button onclick="Search()">Submit</button> 
+  <div id="x" style="display: none;">
+    <table id="mytable" >
+      <tr>
+        <th>Name:</th>
+        <td><p id="name"></p></td>
+      </tr>
+      <tr>
+        <th>Age:</th>
+        <td><p id="age"></p></td>
+      </tr>
+      <tr>
+        <th>secretIdentity:</th>
+        <td><p id="sid"></p></td>
+      </tr>
+      <tr>
+        <th>Skills:</th>
+        <td>
 
+          <ol id="myList">
 
-<h1> Skills Search</h1>
-<input type="text" name="skills search" placeholder="Enter Skills name" id="nam3">
-	
-<button onclick="Search1()">Submit</button> 
+          </ol>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-<table style="width:40%">
-  <tr>
-    <th>Name:</th>
-    <td><p id="name1"></p></td>
-  </tr>
-   <tr>
-    <th>Age:</th>
-    <td><p id="age1">.</p></td>
-  </tr>
-    <tr>
-    <th>secretIdentity:</th>
-    <td><p id="sid1">.</p></td>
-  </tr>
-    <tr>
-    <th>Skills:</th>
-    <td><p id="skills1">.</p></td>
-  </tr>
-</table>
-
-<script type="text/javascript" src="data.js">
+  <p id="notf" style="color: red;"></p>
 
 
-</script>
+  <h1> Skills Search</h1>
+  <input type="text" name="skills search" placeholder="Enter Skills name" id="nam3">
 
-<script>
-console.log(data);
-</script> 
+  <button onclick="SearchSkills()">Submit</button> 
+  <div id="z" style="display: none;">
+    <table id="mytable2" >
+      
+      <tr>
+        <th id="skillname">Skills:</th>
+        <td>
+
+          <ol id="myList2">
+           
+          </ol>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <p id="notf2" style="color: red;"></p>
+
+
+
+  <script>
+    console.log(data);
+  </script> 
 
 
 

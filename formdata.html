@@ -1,26 +1,48 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
+	<title>Form Data</title>
+	<style>
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding: 5px;
+		text-align: left;    
+	}
+</style>
 
-
-  <title>Data Entry Form</title>
-
-
+<script type="text/javascript" src="data.js"></script>
 </head>
+<body onload="retriveInfo()">
 
-<body>
+	<p>The inputted Information on the previous page was:</p>
 
-  <div >
- 
 
-    <h2>Data Retrival</h2>
-    <ul></ul>
+	<table id="mytable" >
+		<tr>
+			<th>Name:</th>
+			<td><p id="name"></p></td>
+		</tr>
+		<tr>
+			<th>Date of Birth:</th>
+			<td><p id="dob"></p></td>
+		</tr>
+		<tr>
+			<th>Address:</th>
+			<td><p id="address"></p></td>
+		</tr>
+		<tr>
+			<th>Post Code:</th>
+			<td><p id="postcode"></p></td>
+		</tr>
+		<tr>
+			<th>Email:</th>
+			<td><p id="email"></p></td>
+		</tr>
+	</table>
 
-    <button>Get IT</button>
-  </div>
 
-  <script src="data.js"></script>
 </body>
-
 </html>
